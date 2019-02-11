@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Coffee
+    link(rel="stylesheet", href="css/bootstrap.min.css")
+    link(rel="stylesheet", href="css/bootstrap-grid.min.css")
+    link(rel="stylesheet", href="css/bootstrap-reboot.min.css")
+    link(rel="stylesheet", href="css/materialdesignicons.min.css")
+    link(rel="stylesheet", href="css/layout.css")
+  body
+    aside
+      .logo
+        img.logo-large(src="../img/logo-admin.png")
+        img.logo-mini(src="../img/logo-admin-mini.png")
+      .menu
+        nav#sidebar.sidebar.sidebar-offcanvas
+          ul.nav
+            li.nav-item
+              a.nav-link(data-toggle='collapse', href='#ui-partner', aria-expanded='false', aria-controls='ui-basic')
+                i.mdi.mdi-account-switch.menu-icon(aria-hidden='true')
+                span.menu-title Đối tác
+                i.menu-arrow
+              #ui-partner.collapse
+                ul.nav.flex-column.sub-menu
+                  li.nav-item
+                    a.nav-link(href='/admin/partner/custom-partner') Thêm đối tác
+                  li.nav-item
+                    a.nav-link(href='/admin/partner/list-partner') Danh sách đối tác
+
+            li.nav-item
+              a.nav-link(data-toggle='collapse', href='#ui-hello', aria-expanded='false', aria-controls='ui-basic')
+                i.mdi.mdi-account-switch.menu-icon(aria-hidden='true')
+                span.menu-title Đối tác
+                i.menu-arrow
+              #ui-hello.collapse
+                ul.nav.flex-column.sub-menu
+                  li.nav-item
+                    a.nav-link(href='/admin/partner/custom-partner') Thêm đối tác
+                  li.nav-item
+                    a.nav-link(href='/admin/partner/list-partner') Danh sách đối tác
+            
+            li.nav-item
+              a.nav-link(data-toggle='collapse', href='#ui-bye', aria-expanded='false', aria-controls='ui-basic')
+                i.mdi.mdi-account-switch.menu-icon(aria-hidden='true')
+                span.menu-title Đối tác
+                i.menu-arrow
+              #ui-bye.collapse
+                ul.nav.flex-column.sub-menu
+                  li.nav-item
+                    a.nav-link(href='/admin/partner/custom-partner') Thêm đối tác
+                  li.nav-item
+                    a.nav-link(href='/admin/partner/list-partner') Danh sách đối tác
+            
+
+    main
+      header
+        .container-fluid
+          .row
+            
+            .col-lg-6.d-flex
+              .menu-btn
+                i.mdi.mdi-menu(title='Thu gọn')
+              .search
+                input.form-control(type="text", placeholder="Nhập từ khóa")
+                button.btn
+                  i.mdi.mdi-magnify
+            .col-lg-6
+              .contact
+                ul
+                  li
+                    a(href='#')
+                      i.mdi.mdi-map
+                      | Số 1, Phường 2, Quận 3, TP.HCM
+                  li
+                    a(href='#')
+                      i.mdi.mdi-phone-classic
+                      | 0912 345 678
+                      
+
+      article     
+        block main
+
+
+
+  script(src='js/jquery.min.js')
+  script(src='js/bootstrap.min.js')
+  script(src='js/bootstrap.bundle.min.js')
+  script(src='js/layout.js')

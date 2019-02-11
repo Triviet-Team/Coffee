@@ -1,0 +1,277 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  color: black;
+  margin: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 30px
+}
+
+h2 {
+  font-size: 24px
+}
+
+h3 {
+  font-size: 20px
+}
+
+h4 {
+  font-size: 16px
+}
+
+h5 {
+  font-size: 14px
+}
+
+h6 {
+  font-size: 12px
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  font-weight: 400;
+  color: inherit;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: inherit
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  border: none;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto
+}
+
+button:focus {
+  outline: none;
+}
+
+section {
+  margin-left: -15px !important;
+  margin-right: -15px !important;
+}
+
+@media (max-width:575px) {
+  h1 {
+    font-size: 20px
+  }
+
+  h2 {
+    font-size: 18px
+  }
+
+  h3 {
+    font-size: 16px
+  }
+
+  h4 {
+    font-size: 14px
+  }
+
+  h5 {
+    font-size: 12px
+  }
+
+  h6 {
+    font-size: 10px
+  }
+}
+
+//end default css -----------------------------------------------------
+
+$main-color: #e6b31e;
+
+
+
+aside {
+  background: #f4f4f4;
+  height: 100vh;
+  width: 250px;
+  border-right: 1px solid #e1e1e1;
+  transition: width 0.25s ease;
+  position: fixed;
+
+  &.aside-mini {
+    width: 70px;
+  }
+}
+
+main {
+  width: calc(100% - 250px);
+  transition: width 0.25s ease, margin 0.25s ease;
+  margin-left: 250px;
+
+  &.main-mini {
+    width: calc(100% - 70px);
+    margin-left: 70px;
+  }  
+}
+
+article {
+  margin: 30px;
+  height: 5000px;
+  margin-top: 80px;
+}
+
+.logo {
+  text-align: center;
+  padding: 5px 15px;
+  height: 60px;
+  border-bottom: 1px solid #e1e1e1; 
+  
+  .logo-large, .logo-mini {
+    transition: width 0.25s ease;  
+  }
+
+  .logo-large-mini {
+    display: none;
+  }
+
+  .logo-mini {
+    display: none;
+  }
+
+  .logo-mini-mini {
+    display: block;
+  }
+}
+
+header {
+  height: 60px;
+  background: #f4f4f4;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 0 15px;
+  position: fixed;
+  width: calc(100% - 250px);
+  transition: width 0.25s ease, margin 0.25s ease;
+  z-index: 10000;
+
+  &.header-mini {
+    width: calc(100% - 70px);
+  }
+
+  .menu-btn {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 0;
+    margin-right: 15px;
+  }
+
+  .search {
+    position: relative;
+    margin: 10px 0;
+
+    input {
+      border: 0;
+      background: none;
+      font-size: 14px;
+      padding-left: 30px;
+      border-radius: 0;
+
+      &:focus {
+        box-shadow: none;
+        background: none;
+        border-bottom: 1px solid $main-color;
+      }
+    }
+
+    button {
+      background: none;
+      position: absolute;
+      top: 0;
+      left: -5px;
+    }
+  }
+
+  .contact {
+    ul {
+      text-align: right;
+      margin: 19px 0;
+      
+      li {
+        display: inline-block;
+
+        a {
+          padding-left: 10px;
+          margin-left: 10px;
+          border-left: 1px solid #e1e1e1;
+        }
+
+        &:first-child a {
+          border-left: 0; 
+        }
+      }
+    }
+  }
+}
+
+.menu {
+  margin: 20px 0;
+
+  ul.nav {
+    li {
+      display: block;
+      width: 100%;
+      padding: 0 10px;
+
+      i {
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+.home {
+  .col {
+    width: 100%;
+    height: 200px;
+    background: black;
+    margin: 15px;
+  }
+}
