@@ -56,67 +56,69 @@ body {
   overflow-x: hidden;
   display: flex;
   flex-direction: row;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: inherit;
-  margin: 0;
-  line-height: 1.5;
-  font-weight: 400;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    margin: 0;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+  
+  h1 {
+    font-size: 2.1em;
+  }
+  
+  h2 {
+    font-size: 1.75em;
+  }
+  
+  h3 {
+    font-size: 1.4em
+  }
+  
+  h4 {
+    font-size: 1.15em;
+  }
+  
+  h5 {
+    font-size: 1em;
+  }
+  
+  h6 {
+    font-size: 0.85em;
+  }
+  
+  a {
+    outline: none;
+    text-decoration: none;
+    font-weight: 400;
+    color: inherit;
+  }
+  
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    color: inherit
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  img {
+    border: none;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto
+  }
 }
 
-h1 {
-  font-size: 2.1em;
-}
-
-h2 {
-  font-size: 1.75em;
-}
-
-h3 {
-  font-size: 1.4em
-}
-
-h4 {
-  font-size: 1.15em;
-}
-
-h5 {
-  font-size: 1em;
-}
-
-h6 {
-  font-size: 0.85em;
-}
-
-a {
-  outline: none;
-  text-decoration: none;
-  font-weight: 400;
-  color: inherit;
-}
-
-a:hover,
-a:focus {
-  text-decoration: none;
-  color: inherit
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  list-style: none;
-}
-
-img {
-  border: none;
-  max-height: 100%;
-  max-width: 100%;
-  width: auto;
-  height: auto
-}
 
 // ---------------------------
 
@@ -171,15 +173,34 @@ aside {
     li {
       position: relative;
 
+
+      .sub-menu {
+        background: #f4f4f4;
+
+        li.active a {
+          color: $main-color;
+        }
+      }
+
+      &:hover {
+        background: $main-color;
+        color: white;
+
+        .sub-menu li {
+          background: #f4f4f4;
+        }
+      }
+
+      &.active {
+        background: $main-color;
+        color: white;
+      }
+
       a.nav-link {
         @include o1;
         padding: 0;
-        margin: 8px 10px;
+        margin: 8px 20px;
         @include tr;
-
-        &:hover {
-          color: $main-color;
-        }
       }
 
       .menu-down {
@@ -192,8 +213,16 @@ aside {
 
       .sub-menu {
         li {
+          background: none;
+
           a {
             color: #353535;
+            transition: .3s;
+
+            &:hover {
+              color: $main-color;
+              transform: translateX(5px);
+            }
           }
         }
       }
@@ -201,31 +230,26 @@ aside {
   }
 
   &.aside-mini {
-    width: 70px;
+    width: 250px;
     transition: all .25s ease;
-    
-    ul li {
-      margin-bottom: 15px;
-
-      a {
-        margin: 8px 15px;
-      }
-    }
-  }
-
-  &.aside-out {
-    transform: none;
   }
 
   .menu {
     margin: 20px 0;
     position: relative;
+
+    &-close {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      font-size: 24px;
+    }
   
     ul.nav {
       li {
         display: block;
         width: 100%;
-        padding: 0 10px;
+        padding: 0;
   
         i {
           padding-right: 10px;
@@ -240,21 +264,9 @@ aside {
     padding: 10px 15px;
     height: 60px;
     border-bottom: 1px solid #e1e1e1; 
-    
-    .logo-large, .logo-mini {
-      transition: width 0.25s ease;  
-    }
-  
-    .logo-large-mini {
-      display: none;
-    }
-  
+
     .logo-mini {
       display: none;
-    }
-  
-    .logo-mini-mini {
-      display: block;
     }
   }
 }
@@ -263,19 +275,8 @@ main {
   width: calc(100% - 250px);
   transition: width 0.25s ease, margin 0.25s ease;
   margin-left: 250px;
-  font-size: calc(7px + 0.5vmax);
+  font-size: calc(9px + 0.38vmax);
 
-  &.main-mini {
-    width: calc(100% - 70px);
-    margin-left: 70px;
-  }  
-}
-
-article {
-  margin: 50px;
-  height: 5000px;
-  margin-top: 60px;
-  margin-bottom: 0;
 }
 
 header {
@@ -287,10 +288,6 @@ header {
   width: calc(100% - 250px);
   transition: width 0.25s ease, margin 0.25s ease;
   z-index: 1000;
-
-  &.header-mini {
-    width: calc(100% - 70px);
-  }
 
   .menu-btn, .cart-btn {
     font-size: 24px;
@@ -367,6 +364,7 @@ header {
 
           i {
             padding-right: 10px;
+            color: $main-color;
           }
         }
 
@@ -376,4 +374,10 @@ header {
       }
     }
   }
+}
+
+article {
+  margin: 50px;
+  margin-top: 60px;
+  margin-bottom: 0;
 }

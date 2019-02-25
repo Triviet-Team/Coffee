@@ -31,61 +31,49 @@ body {
   display: flex;
   flex-direction: row;
 }
-
-h1, h2, h3, h4, h5, h6 {
+body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: inherit;
   margin: 0;
   line-height: 1.5;
   font-weight: 400;
 }
-
-h1 {
+body h1 {
   font-size: 2.1em;
 }
-
-h2 {
+body h2 {
   font-size: 1.75em;
 }
-
-h3 {
+body h3 {
   font-size: 1.4em;
 }
-
-h4 {
+body h4 {
   font-size: 1.15em;
 }
-
-h5 {
+body h5 {
   font-size: 1em;
 }
-
-h6 {
+body h6 {
   font-size: 0.85em;
 }
-
-a {
+body a {
   outline: none;
   text-decoration: none;
   font-weight: 400;
   color: inherit;
 }
-
-a:hover,
-a:focus {
+body a:hover,
+body a:focus {
   text-decoration: none;
   color: inherit;
 }
-
-ul {
+body ul {
   margin: 0;
   padding: 0;
 }
-
-li {
+body li {
   list-style: none;
 }
-
-img {
+body img {
   border: none;
   max-height: 100%;
   max-width: 100%;
@@ -136,17 +124,31 @@ aside::-webkit-scrollbar-thumb:hover {
 aside ul li {
   position: relative;
 }
+aside ul li .sub-menu {
+  background: #f4f4f4;
+}
+aside ul li .sub-menu li.active a {
+  color: #6F4E37;
+}
+aside ul li:hover {
+  background: #6F4E37;
+  color: white;
+}
+aside ul li:hover .sub-menu li {
+  background: #f4f4f4;
+}
+aside ul li.active {
+  background: #6F4E37;
+  color: white;
+}
 aside ul li a.nav-link {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   padding: 0;
-  margin: 8px 10px;
+  margin: 8px 20px;
   transition: 0.3s;
-}
-aside ul li a.nav-link:hover {
-  color: #6F4E37;
 }
 aside ul li .menu-down {
   font-size: 20px !important;
@@ -155,30 +157,35 @@ aside ul li .menu-down {
   right: 0;
   cursor: pointer;
 }
+aside ul li .sub-menu li {
+  background: none;
+}
 aside ul li .sub-menu li a {
   color: #353535;
+  transition: 0.3s;
+}
+aside ul li .sub-menu li a:hover {
+  color: #6F4E37;
+  transform: translateX(5px);
 }
 aside.aside-mini {
-  width: 70px;
+  width: 250px;
   transition: all 0.25s ease;
-}
-aside.aside-mini ul li {
-  margin-bottom: 15px;
-}
-aside.aside-mini ul li a {
-  margin: 8px 15px;
-}
-aside.aside-out {
-  transform: none;
 }
 aside .menu {
   margin: 20px 0;
   position: relative;
 }
+aside .menu-close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 24px;
+}
 aside .menu ul.nav li {
   display: block;
   width: 100%;
-  padding: 0 10px;
+  padding: 0;
 }
 aside .menu ul.nav li i {
   padding-right: 10px;
@@ -190,35 +197,15 @@ aside .logo {
   height: 60px;
   border-bottom: 1px solid #e1e1e1;
 }
-aside .logo .logo-large, aside .logo .logo-mini {
-  transition: width 0.25s ease;
-}
-aside .logo .logo-large-mini {
-  display: none;
-}
 aside .logo .logo-mini {
   display: none;
-}
-aside .logo .logo-mini-mini {
-  display: block;
 }
 
 main {
   width: calc(100% - 250px);
   transition: width 0.25s ease, margin 0.25s ease;
   margin-left: 250px;
-  font-size: calc(7px + 0.5vmax);
-}
-main.main-mini {
-  width: calc(100% - 70px);
-  margin-left: 70px;
-}
-
-article {
-  margin: 50px;
-  height: 5000px;
-  margin-top: 60px;
-  margin-bottom: 0;
+  font-size: calc(9px + 0.38vmax);
 }
 
 header {
@@ -230,9 +217,6 @@ header {
   width: calc(100% - 250px);
   transition: width 0.25s ease, margin 0.25s ease;
   z-index: 1000;
-}
-header.header-mini {
-  width: calc(100% - 70px);
 }
 header .menu-btn, header .cart-btn {
   font-size: 24px;
@@ -300,18 +284,27 @@ header .contact ul li a {
 }
 header .contact ul li a i {
   padding-right: 10px;
+  color: #6F4E37;
 }
 header .contact ul li:first-child a {
   border-left: 0;
 }
 
+article {
+  margin: 50px;
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+
 .slider {
   margin: 0 -50px;
+  height: 90vh;
+  overflow: hidden;
 }
 .slider .owl-theme .owl-nav button.owl-prev,
 .slider .owl-theme .owl-nav button.owl-next {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   font-size: 60px;
   transition: 0.5s;
@@ -331,6 +324,33 @@ header .contact ul li:first-child a {
 }
 .slider .owl-theme .owl-nav button.owl-next {
   right: 0;
+}
+.slider .owl-item img {
+  width: auto;
+  height: 100vh;
+  filter: brightness(0.7);
+}
+.slider .slider-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+  text-align: center;
+  width: 800px;
+}
+.slider .slider-text h1 {
+  margin-bottom: 30px;
+}
+.slider .slider-text h1 a {
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 2px solid white;
+  border-right: 0;
+  border-left: 0;
+  padding: 10px 0;
+  cursor: default;
 }
 
 .cart {
@@ -480,6 +500,42 @@ header .contact ul li:first-child a {
   color: #6F4E37;
 }
 
+.welcome {
+  margin-top: 60px;
+}
+.welcome .title-welcome h1 {
+  font-weight: bold;
+}
+.welcome .title-welcome h3 {
+  text-transform: uppercase;
+  color: #585858;
+}
+.welcome .box-welcome {
+  margin-bottom: 40px;
+}
+.welcome .box-welcome i {
+  font-size: 70px;
+  color: #6F4E37;
+}
+.welcome .box-welcome h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+.welcome .box-welcome h5 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #555555;
+}
+.welcome img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 @media (max-width: 1400px) {
   article {
     margin: 15px;
@@ -488,6 +544,48 @@ header .contact ul li:first-child a {
 
   .slider {
     margin: 0 -15px;
+  }
+
+  aside.aside-mini {
+    width: 70px;
+    transition: all 0.25s ease;
+  }
+  aside.aside-mini ul li {
+    margin-bottom: 15px;
+    padding-left: 3px !important;
+  }
+  aside.aside-mini ul li a {
+    margin: 8px 20px;
+  }
+  aside .menu ul.nav li .menu-title.mini, aside .menu ul.nav li .menu-down.mini {
+    display: none;
+  }
+  aside .logo {
+    text-align: center;
+    padding: 10px 15px;
+    height: 60px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  aside .logo .logo-large, aside .logo .logo-mini {
+    transition: width 0.25s ease;
+  }
+  aside .logo .logo-large-mini {
+    display: none;
+  }
+  aside .logo .logo-mini {
+    display: none;
+  }
+  aside .logo .logo-mini-mini {
+    display: block;
+  }
+
+  main.main-mini {
+    width: calc(100% - 70px);
+    margin-left: 70px;
+  }
+
+  header.header-mini {
+    width: calc(100% - 70px);
   }
 }
 @media (max-width: 1200px) {

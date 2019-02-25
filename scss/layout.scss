@@ -26,13 +26,15 @@ $main-color: #6F4E37;
 
 .slider {
   margin: 0 -50px;
+  height: 90vh;
+  overflow: hidden;
   
   .owl-theme .owl-nav {
 
     button.owl-prev,
     button.owl-next {
       position: absolute;
-      top: 50%;
+      top: 40%;
       transform: translateY(-50%);
       font-size: 60px;
       transition: .5s;
@@ -55,6 +57,38 @@ $main-color: #6F4E37;
     button.owl-next {
       right: 0;
     }
+  }
+
+  .owl-item img {
+    width: auto;
+    height: 100vh;
+    filter: brightness(.7);
+  }
+
+  .slider-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 1;
+    text-align: center;
+    width: 800px;
+
+    h1 {
+      margin-bottom: 30px;
+
+      a {
+        text-transform: uppercase;
+        font-weight: 600;
+        border: 2px solid white;
+        border-right: 0;
+        border-left: 0;
+        padding: 10px 0;
+        cursor: default;
+      }
+    }
+
   }
 }
 
@@ -232,6 +266,48 @@ $main-color: #6F4E37;
         color: $main_color;
       }
     }
+  }
+}
+
+.welcome {
+  margin-top: 60px;
+
+  .title-welcome {
+    h1 {
+      font-weight: bold;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      color: #585858;
+    }
+  }
+
+  .box-welcome {
+    margin-bottom: 40px;
+
+    i {
+      font-size: 70px;
+      color: $main-color;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+
+    h5 {
+      @include o2;
+      color: #555555;
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 

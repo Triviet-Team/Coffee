@@ -2,17 +2,65 @@ extends _inc
 
 block main  
 
-  section.slider
+  section.slider.d-none.d-md-block
     .owl-carousel.slider-carousel.owl-theme
       .item
-        img(src='../img/slider-1.png', alt='')
+        .slider-text
+          h1.wow
+            a cà phê trung nguyên hảo hạng
+          h5.wow(data-wow-delay='.5s')
+            | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque voluptas sit natus reprehenderit aspernatur? Rem nemo cumque earum libero praesentium expedita repudiandae pariatur voluptatibus? Et saepe tempore ab earum molestiae.
+        a(href='san-pham.html')
+          img(src='../img/slider-1.png', alt='')
       .item
-        img(src='../img/slider-2.png', alt='')
+        .slider-text
+          .slider-text
+            h1.wow
+              a cà phê hòa tan G7
+            h5.wow(data-wow-delay='.5s')
+              | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque voluptas sit natus reprehenderit aspernatur? Rem nemo cumque earum libero praesentium expedita repudiandae pariatur voluptatibus? Et saepe tempore ab earum molestiae.
+        a(href='san-pham.html')
+          img(src='../img/slider-2.png', alt='')
+      .item
+        .slider-text
+          .slider-text
+            h1.wow
+              a cà phê chồn rang xay
+            h5.wow(data-wow-delay='.5s')
+              | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque voluptas sit natus reprehenderit aspernatur? Rem nemo cumque earum libero praesentium expedita repudiandae pariatur voluptatibus? Et saepe tempore ab earum molestiae.
+        a(href='san-pham.html')
+          img(src='../img/slider-2.png', alt='')
+      
           
-  section.home
+  section.welcome
     .container-fluid
+      .title-welcome.text-center
+        h1 Chào mừng bạn đến với cafe của chúng tôi
+        h3 NHÀ PHÂN PHỐI CAFE UY TÍn
+
       .row
-        .col
-        .col
-        .col
-        .col
+        .col-lg-4
+          .box-welcome.text-center
+            i.mdi.mdi-home-heart
+            h1 100% tự nhiên
+            h5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repudiandae, delectus incidunt molestiae in suscipit laboriosam natus obcaecati amet esse ipsa sunt soluta perferendis explicabo sapiente sint qui assumenda modi.
+          
+          .box-welcome.text-center
+            i.mdi.mdi-umbrella
+            h1 luôn tươi sạch
+            h5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repudiandae, delectus incidunt molestiae in suscipit laboriosam natus obcaecati amet esse ipsa sunt soluta perferendis explicabo sapiente sint qui assumenda modi.
+        
+        .col-lg-4
+          img(src='../img/welcome-img.png')
+        
+        .col-lg-4
+          .box-welcome.text-center
+            i.mdi.mdi-speedometer
+            h1 luôn đậm đà
+            h5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repudiandae, delectus incidunt molestiae in suscipit laboriosam natus obcaecati amet esse ipsa sunt soluta perferendis explicabo sapiente sint qui assumenda modi.
+          
+          .box-welcome.text-center
+            i.mdi.mdi-quality-high
+            h1 chất lượng cao
+            h5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repudiandae, delectus incidunt molestiae in suscipit laboriosam natus obcaecati amet esse ipsa sunt soluta perferendis explicabo sapiente sint qui assumenda modi.
+          
