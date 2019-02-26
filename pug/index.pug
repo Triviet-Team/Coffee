@@ -1,6 +1,61 @@
 extends _inc
 
 block main  
+  .modal.quickview.fade.product-modal-1.show(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle')
+    .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+      .modal-content
+        .modal-header
+          h5#exampleModalCenterTitle.modal-title Xem nhanh sản phẩm
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+        .modal-body
+          .row
+            .col-lg-6
+              .modal-img
+                img.main-image.xzoom(src='../img/product-1.png', xoriginal='../img/product-1.png')
+                .xzoom-thumbs
+                  .owl-carousel.xzoom-carousel.owl-theme
+                    .item
+                      a(href='../img/product-1.png')
+                        img.xzoom-gallery(src='../img/product-1.png', xpreview='../img/product-1.png')
+                    .item
+                      a(href='../img/product-2.png')
+                        img.xzoom-gallery(src='../img/product-2.png', xpreview='../img/product-2.png')
+                    .item
+                      a(href='../img/product-1.png')
+                        img.xzoom-gallery(src='../img/product-1.png', xpreview='../img/product-1.png')
+                    .item
+                      a(href='../img/product-2.png')
+                        img.xzoom-gallery(src='../img/product-2.png', xpreview='../img/product-2.png')
+                    .item
+                      a(href='../img/product-1.png')
+                        img.xzoom-gallery(src='../img/product-1.png', xpreview='../img/product-1.png')
+                    .item
+                      a(href='../img/product-2.png')
+                        img.xzoom-gallery(src='../img/product-2.png', xpreview='../img/product-2.png')
+            .col-lg-6
+              .quickview-detail
+                h2 Logitech G502 Proteus Spectrum
+                h4.price-product
+                  | 699.000 đ 
+                h5
+                  | This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+                .quantity
+                  span Số lượng: 
+                  button.waves-effect.waves-light -
+                  input(type='number', value='1', min='1')
+                  button.waves-effect.waves-light +
+                  button.custom-cart thêm vào giỏ
+              .tags
+                | Thẻ tag: 
+                span 
+                  a(href='#') Đặc sản Hàn quốc
+                | ,
+                span 
+                  a(href='#') Thời trang Hàn Quốc
+        .modal-footer
+          button.btn.btn-light(type='button', data-dismiss='modal') Đóng
+
 
   section.slider.d-none.d-md-block
     .owl-carousel.slider-carousel.owl-theme
@@ -31,7 +86,6 @@ block main
         a(href='san-pham.html')
           img(src='../img/slider-2.png', alt='')
       
-          
   section.welcome
     .container-fluid
       .title-welcome.text-center
@@ -39,28 +93,395 @@ block main
         h3 NHÀ PHÂN PHỐI CAFE UY TÍn
 
       .row
-        .col-lg-4
-          .box-welcome.text-center
+        .col-lg-4.col-sm-6
+          .box-welcome.text-center.wow.zoomIn
             i.mdi.mdi-home-heart
             h1 100% tự nhiên
             h5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repudiandae, delectus incidunt molestiae in suscipit laboriosam natus obcaecati amet esse ipsa sunt soluta perferendis explicabo sapiente sint qui assumenda modi.
           
-          .box-welcome.text-center
+          .box-welcome.text-center.wow.zoomIn(data-wow-delay='.1s')
             i.mdi.mdi-umbrella
             h1 luôn tươi sạch
             h5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repudiandae, delectus incidunt molestiae in suscipit laboriosam natus obcaecati amet esse ipsa sunt soluta perferendis explicabo sapiente sint qui assumenda modi.
         
-        .col-lg-4
+        .col-lg-4.d-none.d-lg-block.wow.zoomIn(data-wow-delay='.2s')
           img(src='../img/welcome-img.png')
         
-        .col-lg-4
-          .box-welcome.text-center
+        .col-lg-4.col-sm-6
+          .box-welcome.text-center.wow.zoomIn(data-wow-delay='.3s')
             i.mdi.mdi-speedometer
             h1 luôn đậm đà
             h5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repudiandae, delectus incidunt molestiae in suscipit laboriosam natus obcaecati amet esse ipsa sunt soluta perferendis explicabo sapiente sint qui assumenda modi.
           
-          .box-welcome.text-center
+          .box-welcome.text-center.wow.zoomIn(data-wow-delay='.4s')
             i.mdi.mdi-quality-high
             h1 chất lượng cao
             h5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repudiandae, delectus incidunt molestiae in suscipit laboriosam natus obcaecati amet esse ipsa sunt soluta perferendis explicabo sapiente sint qui assumenda modi.
+
+  section.aboutus
+    .container-fluid
+      .aboutus-img
+        .row
+          .col-lg-6
+            .aboutus-img-left.wow.zoomIn
+              img(src='../img/about-1.png')
+              img(src='../img/about-2.png')
+          .col-lg-6.d-none.d-lg-block
+            .aboutus-img-right.wow.zoomIn(data-wow-delay='.2s')
+              img(src='../img/about-3.png')
+
+      .aboutus-detail.text-center.wow.zoomIn(data-wow-delay='.4s')
+        h1 về đại phát lộc
+        h5 
+          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iste quae, tempora consequatur saepe rem magnam eius minima, earum ipsa fuga deserunt. Delectus quam aliquam dolor suscipit amet commodi cupiditate?
+          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iste quae, tempora consequatur saepe rem magnam eius minima, earum ipsa fuga deserunt. Delectus quam aliquam dolor suscipit amet commodi cupiditate?
+          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iste quae, tempora consequatur saepe rem magnam eius minima, earum ipsa fuga deserunt. Delectus quam aliquam dolor suscipit amet commodi cupiditate?
+        .aboutus-detail-btn
+          a(href='gioi-thieu.html') xem thêm
+          span hoặc
+          a.contact(href='lien-he.html') liên hệ với chúng tôi
+
+  section.product
+    .container-fluid
+      .title-page
+        h1 sản phẩm của chúng tôi
+
+    .product-zone
+      .product-nav
+        nav.navbar.navbar-light.d-block.d-md-none
+          button.navbar-toggler(type='button', data-toggle='collapse', data-target='#productNav', aria-controls='productNav', aria-expanded='false', aria-label='Toggle navigation')
+            a.navbar-brand Sản phẩm bán chạy
+          i.mdi.mdi-chevron-down
+          #productNav.collapse.navbar-collapse
+            ul.nav.navbar-nav.mr-auto
+              li.nav-item
+                a#product-1-tab.nav-link.active(data-toggle='tab', href='#product-1', role='tab', aria-controls='product-1', aria-selected='true') 
+                  | sản phẩm bán chạy
+              li.nav-item
+                a#product-2-tab.nav-link(data-toggle='tab', href='#product-2', role='tab', aria-controls='product-2', aria-selected='false') 
+                  | cà phê cao cấp
+              li.nav-item
+                a#product-3-tab.nav-link(data-toggle='tab', href='#product-3', role='tab', aria-controls='product-3', aria-selected='false') 
+                  | cà phê hòa tan
+              li.nav-item
+                a#product-4-tab.nav-link(data-toggle='tab', href='#product-4', role='tab', aria-controls='product-4', aria-selected='false') 
+                  | cà phê pha phin
+              li.nav-item
+                a#product-5-tab.nav-link(data-toggle='tab', href='#product-5', role='tab', aria-controls='product-5', aria-selected='false') 
+                  | cà phê hạt rang nguyên chất
+
+
+        ul.nav.nav-tabs.d-none.d-md-block.wow.zoomIn(role='tablist')
+          li.nav-item
+            a#product-1-tab.nav-link.waves-effect.waves-light.active(data-toggle='tab', href='#product-1', role='tab', aria-controls='product-1', aria-selected='true') 
+              img(src='../img/product-nav.png')
+              | sản phẩm bán chạy
+          li.nav-item
+            a#product-2-tab.nav-link.waves-effect.waves-light(data-toggle='tab', href='#product-2', role='tab', aria-controls='product-2', aria-selected='false') 
+              img(src='../img/product-nav.png')
+              | cà phê cao cấp
+          li.nav-item
+            a#product-3-tab.nav-link.waves-effect.waves-light(data-toggle='tab', href='#product-3', role='tab', aria-controls='product-3', aria-selected='false') 
+              img(src='../img/product-nav.png')
+              | cà phê hòa tan
+          li.nav-item
+            a#product-4-tab.nav-link.waves-effect.waves-light(data-toggle='tab', href='#product-4', role='tab', aria-controls='product-4', aria-selected='false') 
+              img(src='../img/product-nav.png')
+              | cà phê pha phin
+          li.nav-item
+            a#product-5-tab.nav-link.waves-effect.waves-light(data-toggle='tab', href='#product-5', role='tab', aria-controls='product-5', aria-selected='false') 
+              img(src='../img/product-nav.png')
+              | cà phê hạt rang nguyên chất
+
+      .tab-content
+        #product-1.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='product-1-tab')
+          .tab-pane-product
+            .box-product
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-1.png')
+              .box-product-detail
+                h5
+                  a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                    | Cà phê hòa tan Espresso hộp 100 gói
+                h4 250.000 đ
+              .box-product-custom
+                a.custom-quickview(data-toggle="modal" data-target=".product-modal-1", title='Xem nhanh sản phẩm')
+                  i.mdi.mdi-eye-plus
+                a.custom-cart
+                  i.mdi.mdi-cart-plus
+                  | Thêm vào giỏ
+                a(href='chi-tiet-san-pham.html', title='Xem chi tiết')
+                  i.mdi.mdi-link-variant
+
+            .box-product
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-1.png')
+              .box-product-detail
+                h5
+                  a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                    | Cà phê hòa tan Espresso hộp 100 gói
+                h4 250.000 đ
+              .box-product-custom
+                a.custom-quickview(data-toggle="modal" data-target=".product-modal-1", title='Xem nhanh sản phẩm')
+                  i.mdi.mdi-eye-plus
+                a.custom-cart
+                  i.mdi.mdi-cart-plus
+                  | Thêm vào giỏ
+                a(href='chi-tiet-san-pham.html', title='Xem chi tiết')
+                  i.mdi.mdi-link-variant
+
+            .box-product
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+              .box-product-detail
+                h5
+                  a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                    | Cà phê hòa tan Espresso hộp 100 gói
+                h4 250.000 đ
+              .box-product-custom
+                a.custom-quickview(data-toggle="modal" data-target=".product-modal-1", title='Xem nhanh sản phẩm')
+                  i.mdi.mdi-eye-plus
+                a.custom-cart
+                  i.mdi.mdi-cart-plus
+                  | Thêm vào giỏ
+                a(href='chi-tiet-san-pham.html', title='Xem chi tiết')
+                  i.mdi.mdi-link-variant
+
+            .box-product
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-1.png')
+              .box-product-detail
+                h5
+                  a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                    | Cà phê hòa tan Espresso hộp 100 gói
+                h4 250.000 đ
+              .box-product-custom
+                a.custom-quickview(data-toggle="modal" data-target=".product-modal-1", title='Xem nhanh sản phẩm')
+                  i.mdi.mdi-eye-plus
+                a.custom-cart
+                  i.mdi.mdi-cart-plus
+                  | Thêm vào giỏ
+                a(href='chi-tiet-san-pham.html', title='Xem chi tiết')
+                  i.mdi.mdi-link-variant
+
+            .box-product
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+              .box-product-detail
+                h5
+                  a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                    | Cà phê hòa tan Espresso hộp 100 gói
+                h4 250.000 đ
+              .box-product-custom
+                a.custom-quickview(data-toggle="modal" data-target=".product-modal-1", title='Xem nhanh sản phẩm')
+                  i.mdi.mdi-eye-plus
+                a.custom-cart
+                  i.mdi.mdi-cart-plus
+                  | Thêm vào giỏ
+                a(href='chi-tiet-san-pham.html', title='Xem chi tiết')
+                  i.mdi.mdi-link-variant
+
+            .box-product
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+              .box-product-detail
+                h5
+                  a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                    | Cà phê hòa tan Espresso hộp 100 gói
+                h4 250.000 đ
+              .box-product-custom
+                a.custom-quickview(data-toggle="modal" data-target=".product-modal-1", title='Xem nhanh sản phẩm')
+                  i.mdi.mdi-eye-plus
+                a.custom-cart
+                  i.mdi.mdi-cart-plus
+                  | Thêm vào giỏ
+                a(href='chi-tiet-san-pham.html', title='Xem chi tiết')
+                  i.mdi.mdi-link-variant
+
+            .box-product
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-1.png')
+              .box-product-detail
+                h5
+                  a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                    | Cà phê hòa tan Espresso hộp 100 gói
+                h4 250.000 đ
+              .box-product-custom
+                a.custom-quickview(data-toggle="modal" data-target=".product-modal-1", title='Xem nhanh sản phẩm')
+                  i.mdi.mdi-eye-plus
+                a.custom-cart
+                  i.mdi.mdi-cart-plus
+                  | Thêm vào giỏ
+                a(href='chi-tiet-san-pham.html', title='Xem chi tiết')
+                  i.mdi.mdi-link-variant
+
+            .box-product
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+              .box-product-detail
+                h5
+                  a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                    | Cà phê hòa tan Espresso hộp 100 gói
+                h4 250.000 đ
+              .box-product-custom
+                a.custom-quickview(data-toggle="modal" data-target=".product-modal-1", title='Xem nhanh sản phẩm')
+                  i.mdi.mdi-eye-plus
+                a.custom-cart
+                  i.mdi.mdi-cart-plus
+                  | Thêm vào giỏ
+                a(href='chi-tiet-san-pham.html', title='Xem chi tiết')
+                  i.mdi.mdi-link-variant
+
           
+
+        #product-2.tab-pane.fade(role='tabpanel', aria-labelledby='product-2-tab')
+          .tab-pane-product
+            .box-product
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+              .box-product-detail
+                h5
+                  a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                    | Cà phê hòa tan Espresso hộp 100 gói
+                h4 250.000 đ
+              .box-product-custom
+                a.custom-quickview(data-toggle="modal" data-target=".product-modal-1", title='Xem nhanh sản phẩm')
+                  i.mdi.mdi-eye-plus
+                a.custom-cart
+                  i.mdi.mdi-cart-plus
+                  | Thêm vào giỏ
+                a(href='chi-tiet-san-pham.html', title='Xem chi tiết')
+                  i.mdi.mdi-link-variant
+            
+            .box-product
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+              .box-product-detail
+                h5
+                  a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                    | Cà phê hòa tan Espresso hộp 100 gói
+                h4 250.000 đ
+              .box-product-custom
+                a.custom-quickview(data-toggle="modal" data-target=".product-modal-1", title='Xem nhanh sản phẩm')
+                  i.mdi.mdi-eye-plus
+                a.custom-cart
+                  i.mdi.mdi-cart-plus
+                  | Thêm vào giỏ
+                a(href='chi-tiet-san-pham.html', title='Xem chi tiết')
+                  i.mdi.mdi-link-variant
+            
+            .box-product
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+              .box-product-detail
+                h5
+                  a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                    | Cà phê hòa tan Espresso hộp 100 gói
+                h4 250.000 đ
+              .box-product-custom
+                a.custom-quickview(data-toggle="modal" data-target=".product-modal-1", title='Xem nhanh sản phẩm')
+                  i.mdi.mdi-eye-plus
+                a.custom-cart
+                  i.mdi.mdi-cart-plus
+                  | Thêm vào giỏ
+                a(href='chi-tiet-san-pham.html', title='Xem chi tiết')
+                  i.mdi.mdi-link-variant
+            
+  section.news
+    .container-fluid
+      .title-page
+        h1 tin tức nổi bật
+
+      .owl-carousel.news-carousel.owl-theme.wow.zoomIn
+        .item
+          .box-news
+            .box-news-img
+              a(href='chi-tiet-tin-tuc.html')
+                img(src='../img/news-1.png')
+
+            .box-news-detail
+              h3
+                a(href='chi-tiet-tin-tuc.html', title='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, sit?')
+                  | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, sit?
+              h5
+                | admin
+                span / 26/02/2019
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, eos. Dolores, eligendi expedita. Porro quasi quo architecto in aspernatur est?
+
+              .box-news-detail-btn
+                a(href='chi-tiet-tin-tuc.html') Xem thêm
+        
+        .item
+          .box-news
+            .box-news-img
+              a(href='chi-tiet-tin-tuc.html')
+                img(src='../img/news-1.png')
+
+            .box-news-detail
+              h3
+                a(href='chi-tiet-tin-tuc.html', title='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, sit?')
+                  | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, sit?
+              h5
+                | admin
+                span / 26/02/2019
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, eos. Dolores, eligendi expedita. Porro quasi quo architecto in aspernatur est?
+
+              .box-news-detail-btn
+                a(href='chi-tiet-tin-tuc.html') Xem thêm
+        
+        .item
+          .box-news
+            .box-news-img
+              a(href='chi-tiet-tin-tuc.html')
+                img(src='../img/news-1.png')
+
+            .box-news-detail
+              h3
+                a(href='chi-tiet-tin-tuc.html', title='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, sit?')
+                  | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, sit?
+              h5
+                | admin
+                span / 26/02/2019
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, eos. Dolores, eligendi expedita. Porro quasi quo architecto in aspernatur est?
+
+              .box-news-detail-btn
+                a(href='chi-tiet-tin-tuc.html') Xem thêm
+        
+        .item
+          .box-news
+            .box-news-img
+              a(href='chi-tiet-tin-tuc.html')
+                img(src='../img/news-1.png')
+
+            .box-news-detail
+              h3
+                a(href='chi-tiet-tin-tuc.html', title='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, sit?')
+                  | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, sit?
+              h5
+                | admin
+                span / 26/02/2019
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, eos. Dolores, eligendi expedita. Porro quasi quo architecto in aspernatur est?
+
+              .box-news-detail-btn
+                a(href='chi-tiet-tin-tuc.html') Xem thêm
+        
+  section.letter
+    .container
+      .box-letter.text-center
+        h4.wow.zoomIn BẠN MUỐN NHẬP HÀNG SỐ LƯỢNG LỚN ?
+        h3.wow.zoomIn(data-wow-delay='.1s') NHẬP EMAIL ĐỂ NHẬN BÁO GIÁ SỈ NGAY
+
+        form
+          input.form-control.wow.zoomIn(data-wow-delay='.2s', type='text', placeholder='Nhập email của bạn . . .')
+          button.btn.wow.zoomIn(data-wow-delay='.3s') Đăng ký

@@ -27,22 +27,22 @@ html(lang="en")
       .logo
         a(href='index.html')
           img.logo-large(src="../img/logo.png")
-          img.logo-mini(src="../img/logo-mini.png")
+        img.logo-mini(src="../img/logo-mini.png")
       .menu
         nav#sidebar.sidebar
           ul.nav
             li.nav-item
-              a.nav-link(href='index.html')
+              a.nav-link(href='index.html', title='Trang chủ')
                 i.mdi.mdi-home-circle.menu-icon
                 span.menu-title Trang chủ
             
             li.nav-item
-              a.nav-link(href='gioi-thieu.html')
+              a.nav-link(href='gioi-thieu.html', title='Giới thiệu')
                 i.mdi.mdi-account-supervisor-circle.menu-icon
                 span.menu-title Giới thiệu
 
             li.nav-item
-              a.nav-link(data-toggle='collapse', href='#product', aria-expanded='false', aria-controls='ui-basic')
+              a.nav-link(data-toggle='collapse', href='#product', aria-expanded='false', aria-controls='ui-basic', title='Sản phẩm')
                 i.mdi.mdi-coffee.menu-icon(aria-hidden='true')
                 span.menu-title Sản phẩm
               i.mdi.mdi-chevron-down.menu-down(data-toggle='collapse', href='#product', aria-expanded='false', aria-controls='ui-basic')
@@ -80,12 +80,12 @@ html(lang="en")
                     a.nav-link(href='san-pham-1.html') Cà phê hòa tan
             
             li.nav-item
-              a.nav-link(href='tin-tuc.html')
+              a.nav-link(href='tin-tuc.html', title='Tin tức')
                 i.mdi.mdi-newspaper.menu-icon
                 span.menu-title Tin tức
 
             li.nav-item
-              a.nav-link(data-toggle='collapse', href='#term', aria-expanded='false', aria-controls='ui-basic')
+              a.nav-link(data-toggle='collapse', href='#term', aria-expanded='false', aria-controls='ui-basic', title='Điều khoản')
                 i.mdi.mdi-onenote.menu-icon(aria-hidden='true')
                 span.menu-title Điều khoản
               i.mdi.mdi-chevron-down.menu-down(data-toggle='collapse', href='#term', aria-expanded='false', aria-controls='ui-basic')
@@ -99,7 +99,7 @@ html(lang="en")
                     a.nav-link(href='dieu-khoan.html') Điều khoản bảo mật
             
             li.nav-item
-              a.nav-link(href='lien-he.html')
+              a.nav-link(href='lien-he.html', title='Liên hệ')
                 i.mdi.mdi-send.menu-icon
                 span.menu-title Liên hệ
 
@@ -156,7 +156,7 @@ html(lang="en")
                 h4 500.000 đ
             
             .box-product-cart
-              img(src='../img/product-1.png')
+              img(src='../img/product-2.png')
               .box-product-cart-detail
                 h5
                   a(href="chi-tiet-san-pham.html") Mèo thần tài
@@ -178,7 +178,7 @@ html(lang="en")
                 h4 500.000 đ
             
             .box-product-cart
-              img(src='../img/product-1.png')
+              img(src='../img/product-2.png')
               .box-product-cart-detail
                 h5
                   a(href="chi-tiet-san-pham.html") Mèo thần tài
@@ -200,7 +200,7 @@ html(lang="en")
                 h4 500.000 đ
             
             .box-product-cart
-              img(src='../img/product-1.png')
+              img(src='../img/product-2.png')
               .box-product-cart-detail
                 h5
                   a(href="chi-tiet-san-pham.html") Mèo thần tài
@@ -222,7 +222,7 @@ html(lang="en")
                 h4 500.000 đ
             
             .box-product-cart
-              img(src='../img/product-1.png')
+              img(src='../img/product-2.png')
               .box-product-cart-detail
                 h5
                   a(href="chi-tiet-san-pham.html") Mèo thần tài
@@ -256,6 +256,81 @@ html(lang="en")
 
         block main
 
+      footer
+        .container-fluid
+          .footer-top
+            .row
+              .col-lg-3.col-md-6
+                .info
+                  a(href='index.html')
+                    img(src='../img/logo.png')
+                  
+                  ul
+                    li 2593 Timbercrest Road, Chisana, Alaska Badalas United State
+                    li (+91)7-723-4608
+                    li Aurosfurniture@gmail.com
+                
+              .col-lg-2.col-md-3.d-none.d-md-block
+                .link
+                  h3 sản phẩm
+
+                  ul
+                    li
+                      a(href='san-pham.html') Cà phê cao cấp
+                    li
+                      a(href='san-pham.html') Cà phê hòa tan
+                    li
+                      a(href='san-pham.html') Cà phê pha phin
+                    li
+                      a(href='san-pham.html') Cà phê hạt rang nguyên chất
+                
+              .col-lg-2.col-md-3.d-none.d-md-block
+                .term
+                  h3 điều khoản
+
+                  ul
+                    li
+                      a(href='dieu-khoan.html') Bảo mật
+                    li
+                      a(href='dieu-khoan.html') Mua hàng
+                    li
+                      a(href='dieu-khoan.html') Thanh toán
+                    li
+                      a(href='dieu-khoan.html') Đổi trả
+                
+              .col-lg-5.d-none.d-lg-block
+                .partner
+                  h3 đối tác
+
+                  .owl-carousel.partner-carousel.owl-theme
+                    .item
+                      img(src='../img/partner-1.png')
+                    .item
+                      img(src='../img/partner-1.png')
+                    .item
+                      img(src='../img/partner-1.png')
+                    .item
+                      img(src='../img/partner-1.png')
+                    .item
+                      img(src='../img/partner-1.png')
+
+          .footer-bottom
+            .row
+              .col-md-8.text-center.text-md-left.mb-3.mb-md-0
+                h5 Copyright @ 2018 Dai Phat Loc. All Reserved. Designed by Tri Viet
+              .col-md-4.text-center.text-md-right
+                a(href='#')
+                  i.mdi.mdi-facebook
+                a(href='#')
+                  i.mdi.mdi-twitter
+                a(href='#')
+                  i.mdi.mdi-skype
+                a(href='#')
+                  i.mdi.mdi-youtube
+
+              
+
+                  
 
       script(src='../js/jquery-3.3.1.min.js')
       script(src='../js/jquery.touchSwipe.min.js')
