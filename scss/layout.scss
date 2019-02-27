@@ -414,10 +414,6 @@ $main-color: #6F4E37;
     grid-template-columns: 125px calc(100% - 175px);
     grid-column-gap: 50px;
 
-    &.out {
-      grid-column-gap: 30px;
-    }
-
     .product-nav {
       .nav {
         border-bottom: 0;
@@ -519,16 +515,6 @@ $main-color: #6F4E37;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-gap: 30px;
 
-      &.out {
-        grid-gap: 15px;
-
-        .box-product-custom {
-          a.custom-quickview, a.custom-cart {
-            padding-right: 5px;
-            margin-right: 5px;
-          }
-        }
-      }
     }
   }
 }

@@ -133,6 +133,23 @@ $main-color: #6F4E37;
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
+
+  .product .tab-content .tab-pane-product.out {
+    grid-gap: 15px;
+
+    .box-product-custom {
+      a.custom-quickview, a.custom-cart {
+        padding-right: 5px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .product-zone {
+    &.out {
+      grid-column-gap: 30px;
+    }
+  }
 }
 
 @media (max-width: 1200px) {
