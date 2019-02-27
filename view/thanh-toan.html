@@ -207,7 +207,7 @@
         <div class="overlay-menu"></div>
         <div class="overlay"></div>
         <section class="bg-page">
-          <div class="container-fluid">sản phẩm</div>
+          <div class="container-fluid">Thanh toán</div>
         </section>
         <section class="bread-crumb">
           <div class="container-fluid">
@@ -215,197 +215,143 @@
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
-                  <li class="breadcrumb-item active">Sản phẩm</li>
+                  <li class="breadcrumb-item active">Thanh toán</li>
                 </ol>
               </nav>
             </div>
           </div>
         </section>
-        <section class="product-page">
-          <div class="container-fluid">
-            <div class="left">
-              <div class="filter">
-                <div class="filter-close d-block d-lg-none"><i class="mdi mdi-close"></i></div>
-                <div class="filter-price">
-                  <h3>lọc giá</h3>
-                  <label class="check-box">0 đ - 200.000 đ
-                    <input type="checkbox" checked="checked"/><span class="checkmark"></span>
-                  </label>
-                  <label class="check-box">200.000 đ - 500.000 đ
-                    <input type="checkbox"/><span class="checkmark"></span>
-                  </label>
-                  <label class="check-box">500.000 đ - 1.000.000 đ
-                    <input type="checkbox"/><span class="checkmark"></span>
-                  </label>
-                  <label class="check-box">1.000.000 đ - 2.000.000 đ
-                    <input type="checkbox"/><span class="checkmark"></span>
-                  </label>
-                  <label class="check-box">2.000.000 đ - 3.000.000 đ
-                    <input type="checkbox"/><span class="checkmark"></span>
-                  </label>
-                  <label class="check-box">Hơn 3.000.000 đ
-                    <input type="checkbox"/><span class="checkmark"></span>
-                  </label>
+        <section class="pay-page">
+          <div class="container">
+            <form>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="pay-page-title">
+                    <h4>Đơn hàng</h4>
+                  </div>
+                  <div class="pay-order">
+                    <p>3 sản phẩm trong giỏ hàng</p>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="box-pay-order"><img src="../img/product-1.png" alt=""/>
+                          <h5><a href="chi-tiet-san-pham.html">Logitech G502 Proteus Spectrum</a></h5>
+                          <h5>Số lượng: 1</h5>
+                          <h4>Thành tiền: 690.000 đ</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="box-pay-order"><img src="../img/product-1.png" alt=""/>
+                          <h5><a href="chi-tiet-san-pham.html">Logitech G502 Proteus Spectrum</a></h5>
+                          <h5>Số lượng: 1</h5>
+                          <h4>Thành tiền: 690.000 đ</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="box-pay-order"><img src="../img/product-1.png" alt=""/>
+                          <h5><a href="chi-tiet-san-pham.html">Logitech G502 Proteus Spectrum</a></h5>
+                          <h5>Số lượng: 1</h5>
+                          <h4>Thành tiền: 690.000 đ</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="seller">
-                  <h3>sản phẩm bán chạy</h3>
-                  <div class="product-left">
-                    <div class="product-left-img"><a href="chi-tiet-san-pham.html"><img src="../img/product-1.png"/></a></div>
-                    <div class="product-left-detail">
-                      <h5><a href="chi-tiet-san-pham.html" title="Cà phê hòa tan Espresso hộp 100 gói">Cà phê hòa tan Espresso hộp 100 gói</a></h5>
-                      <h4>250.000 đ</h4>
+                <div class="col-lg-8 order-lg-4">
+                  <div class="pay-info">
+                    <div class="pay-page-title">
+                      <h4>Thông tin mua hàng</h4>
                     </div>
-                  </div>
-                  <div class="product-left">
-                    <div class="product-left-img"><a href="chi-tiet-san-pham.html"><img src="../img/product-1.png"/></a></div>
-                    <div class="product-left-detail">
-                      <h5><a href="chi-tiet-san-pham.html" title="Cà phê hòa tan Espresso hộp 100 gói">Cà phê hòa tan Espresso hộp 100 gói</a></h5>
-                      <h4>250.000 đ</h4>
+                    <div class="pay-info-1">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="name">Họ tên* :</label>
+                            <input class="form-control" id="name" type="text" placeholder="Nhập họ tên"/>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="city">Tỉnh / Thành* :</label>
+                            <select class="form-control" id="city">
+                              <option value="">-- Chọn tỉnh thành ---</option>
+                              <option value="">Thanh Hóa</option>
+                              <option value="">Tiểu Vương Quốc</option>
+                              <option value="">Hoa Thanh Quế</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-6 order-6 order-md-0">
+                          <div class="form-group">
+                            <label for="email">Email* :</label>
+                            <input class="form-control" id="email" type="email" placeholder="Nhập Email"/>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="district">Quận / Huyện* :</label>
+                            <select class="form-control" id="district">
+                              <option value="">-- Chọn quận huyện ---</option>
+                              <option value="">Thị xã Bỉm Sơn</option>
+                              <option value="">Thị xã Sầm Sơn</option>
+                              <option value="">Huyện Đông Sơn</option>
+                              <option value="">Huyện Tĩnh Gia</option>
+                              <option value="">Huyện Hà Trung</option>
+                              <option value="">Huyện Yên Định</option>
+                              <option value="">Huyện Mường Lát</option>
+                              <option value="">Huyện Nga Sơn</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="phone">Số điện thoại* :</label>
+                            <input class="form-control" id="phone" type="tel" placeholder="Nhập số điện thoại"/>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="address">Địa chỉ* :</label>
+                            <input class="form-control" id="address" type="text" placeholder="Nhập địa chỉ"/>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="content">Ghi chú* :</label>
+                            <textarea class="form-control" id="content" placeholder="Nhập ghi chú"></textarea>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="product-left">
-                    <div class="product-left-img"><a href="chi-tiet-san-pham.html"><img src="../img/product-1.png"/></a></div>
-                    <div class="product-left-detail">
-                      <h5><a href="chi-tiet-san-pham.html" title="Cà phê hòa tan Espresso hộp 100 gói">Cà phê hòa tan Espresso hộp 100 gói</a></h5>
-                      <h4>250.000 đ</h4>
+                    <div class="pay-page-title">
+                      <h4>Ước tính thanh toán</h4>
                     </div>
-                  </div>
-                  <div class="product-left">
-                    <div class="product-left-img"><a href="chi-tiet-san-pham.html"><img src="../img/product-1.png"/></a></div>
-                    <div class="product-left-detail">
-                      <h5><a href="chi-tiet-san-pham.html" title="Cà phê hòa tan Espresso hộp 100 gói">Cà phê hòa tan Espresso hộp 100 gói</a></h5>
-                      <h4>250.000 đ</h4>
-                    </div>
-                  </div>
-                  <div class="product-left">
-                    <div class="product-left-img"><a href="chi-tiet-san-pham.html"><img src="../img/product-1.png"/></a></div>
-                    <div class="product-left-detail">
-                      <h5><a href="chi-tiet-san-pham.html" title="Cà phê hòa tan Espresso hộp 100 gói">Cà phê hòa tan Espresso hộp 100 gói</a></h5>
-                      <h4>250.000 đ</h4>
+                    <div class="pay-info-2">
+                      <table class="table table-bordered">
+                        <tbody>
+                          <tr>
+                            <td>Tổng tiền</td>
+                            <td>Phí vận chuyển</td>
+                            <td>Tổng cộng</td>
+                          </tr>
+                          <tr>
+                            <td>699.000 đ</td>
+                            <td>20.000 đ</td>
+                            <td class="pay-total">719.000 đ</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="pay-info-2-btn text-right"><a href="gio-hang.html"><i class="fa fa-undo" aria-hidden="true"></i>                                            Trở về giỏ hàng</a>
+                        <button type="submit"><a class="order-btn">Đặt hàng</a></button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="banner-left"><a href="chi-tiet-san-pham.html">       <img src="../img/about-3.png"/></a></div>
-            </div>
-            <div class="main">
-              <div class="filter-btn d-block d-lg-none"><i class="mdi mdi-filter"></i>Lọc sản phẩm</div>
-              <h2>Cà phê cao cấp</h2>
-              <div class="main-custom">
-                <div class="type d-none d-md-block"><span>Kiểu xem:</span><i class="mdi mdi-view-grid type-grid active"></i><i class="mdi mdi-view-list type-list"></i></div>
-                <div class="sort"><span class="d-none d-md-inline-block">Sắp xếp:</span>
-                  <select class="form-control">
-                    <option value="">Sản phẩm mới nhất</option>
-                    <option value="">Giá từ cao xuống thấp</option>
-                    <option value="">Giá từ thấp lên cao</option>
-                    <option value="">Tên từ A đến Z</option>
-                    <option value="">Tên từ Z đến A</option>
-                  </select>
-                </div>
-                <div class="view"><span>Hiển thị:</span>
-                  <select class="form-control">
-                    <option value="">8</option>
-                    <option value="" selected="selected">16 </option>
-                    <option value="">24</option>
-                    <option value="">32</option>
-                  </select>Sản phẩm
-                </div>
-              </div>
-              <div class="main-product">
-                <div class="box-product">
-                  <div class="box-product-img"><a href="chi-tiet-san-pham.html" title="Nhấn để xem chi tiết"><img src="../img/product-1.png"/></a></div>
-                  <div class="box-product-detail">
-                    <h5><a href="chi-tiet-san-pham.html" title="Cà phê hòa tan Espresso hộp 100 gói">Cà phê hòa tan Espresso hộp 100 gói</a></h5>
-                    <h4>250.000 đ</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quos eius voluptatem cumque soluta, nihil vero repellat deserunt nisi consequuntur! Pariatur, modi asperiores eum magnam perspiciatis unde quo vitae dicta?</p>
-                  </div>
-                  <div class="box-product-custom"><a class="custom-quickview" data-toggle="modal" data-target=".product-modal-1" title="Xem nhanh sản phẩm"><i class="mdi mdi-eye-plus"></i></a><a class="custom-cart"><i class="mdi mdi-cart-plus"></i>Thêm vào giỏ</a><a href="chi-tiet-san-pham.html" title="Xem chi tiết"><i class="mdi mdi-link-variant"></i></a></div>
-                </div>
-                <div class="box-product">
-                  <div class="box-product-img"><a href="chi-tiet-san-pham.html" title="Nhấn để xem chi tiết"><img src="../img/product-1.png"/></a></div>
-                  <div class="box-product-detail">
-                    <h5><a href="chi-tiet-san-pham.html" title="Cà phê hòa tan Espresso hộp 100 gói">Cà phê hòa tan Espresso hộp 100 gói</a></h5>
-                    <h4>250.000 đ</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quos eius voluptatem cumque soluta, nihil vero repellat deserunt nisi consequuntur! Pariatur, modi asperiores eum magnam perspiciatis unde quo vitae dicta?</p>
-                  </div>
-                  <div class="box-product-custom"><a class="custom-quickview" data-toggle="modal" data-target=".product-modal-1" title="Xem nhanh sản phẩm"><i class="mdi mdi-eye-plus"></i></a><a class="custom-cart"><i class="mdi mdi-cart-plus"></i>Thêm vào giỏ</a><a href="chi-tiet-san-pham.html" title="Xem chi tiết"><i class="mdi mdi-link-variant"></i></a></div>
-                </div>
-                <div class="box-product">
-                  <div class="box-product-img"><a href="chi-tiet-san-pham.html" title="Nhấn để xem chi tiết"><img src="../img/product-1.png"/></a></div>
-                  <div class="box-product-detail">
-                    <h5><a href="chi-tiet-san-pham.html" title="Cà phê hòa tan Espresso hộp 100 gói">Cà phê hòa tan Espresso hộp 100 gói</a></h5>
-                    <h4>250.000 đ</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quos eius voluptatem cumque soluta, nihil vero repellat deserunt nisi consequuntur! Pariatur, modi asperiores eum magnam perspiciatis unde quo vitae dicta?</p>
-                  </div>
-                  <div class="box-product-custom"><a class="custom-quickview" data-toggle="modal" data-target=".product-modal-1" title="Xem nhanh sản phẩm"><i class="mdi mdi-eye-plus"></i></a><a class="custom-cart"><i class="mdi mdi-cart-plus"></i>Thêm vào giỏ</a><a href="chi-tiet-san-pham.html" title="Xem chi tiết"><i class="mdi mdi-link-variant"></i></a></div>
-                </div>
-                <div class="box-product">
-                  <div class="box-product-img"><a href="chi-tiet-san-pham.html" title="Nhấn để xem chi tiết"><img src="../img/product-1.png"/></a></div>
-                  <div class="box-product-detail">
-                    <h5><a href="chi-tiet-san-pham.html" title="Cà phê hòa tan Espresso hộp 100 gói">Cà phê hòa tan Espresso hộp 100 gói</a></h5>
-                    <h4>250.000 đ</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quos eius voluptatem cumque soluta, nihil vero repellat deserunt nisi consequuntur! Pariatur, modi asperiores eum magnam perspiciatis unde quo vitae dicta?</p>
-                  </div>
-                  <div class="box-product-custom"><a class="custom-quickview" data-toggle="modal" data-target=".product-modal-1" title="Xem nhanh sản phẩm"><i class="mdi mdi-eye-plus"></i></a><a class="custom-cart"><i class="mdi mdi-cart-plus"></i>Thêm vào giỏ</a><a href="chi-tiet-san-pham.html" title="Xem chi tiết"><i class="mdi mdi-link-variant"></i></a></div>
-                </div>
-                <div class="box-product">
-                  <div class="box-product-img"><a href="chi-tiet-san-pham.html" title="Nhấn để xem chi tiết"><img src="../img/product-1.png"/></a></div>
-                  <div class="box-product-detail">
-                    <h5><a href="chi-tiet-san-pham.html" title="Cà phê hòa tan Espresso hộp 100 gói">Cà phê hòa tan Espresso hộp 100 gói</a></h5>
-                    <h4>250.000 đ</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quos eius voluptatem cumque soluta, nihil vero repellat deserunt nisi consequuntur! Pariatur, modi asperiores eum magnam perspiciatis unde quo vitae dicta?</p>
-                  </div>
-                  <div class="box-product-custom"><a class="custom-quickview" data-toggle="modal" data-target=".product-modal-1" title="Xem nhanh sản phẩm"><i class="mdi mdi-eye-plus"></i></a><a class="custom-cart"><i class="mdi mdi-cart-plus"></i>Thêm vào giỏ</a><a href="chi-tiet-san-pham.html" title="Xem chi tiết"><i class="mdi mdi-link-variant"></i></a></div>
-                </div>
-                <div class="box-product">
-                  <div class="box-product-img"><a href="chi-tiet-san-pham.html" title="Nhấn để xem chi tiết"><img src="../img/product-1.png"/></a></div>
-                  <div class="box-product-detail">
-                    <h5><a href="chi-tiet-san-pham.html" title="Cà phê hòa tan Espresso hộp 100 gói">Cà phê hòa tan Espresso hộp 100 gói</a></h5>
-                    <h4>250.000 đ</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quos eius voluptatem cumque soluta, nihil vero repellat deserunt nisi consequuntur! Pariatur, modi asperiores eum magnam perspiciatis unde quo vitae dicta?</p>
-                  </div>
-                  <div class="box-product-custom"><a class="custom-quickview" data-toggle="modal" data-target=".product-modal-1" title="Xem nhanh sản phẩm"><i class="mdi mdi-eye-plus"></i></a><a class="custom-cart"><i class="mdi mdi-cart-plus"></i>Thêm vào giỏ</a><a href="chi-tiet-san-pham.html" title="Xem chi tiết"><i class="mdi mdi-link-variant"></i></a></div>
-                </div>
-                <div class="box-product">
-                  <div class="box-product-img"><a href="chi-tiet-san-pham.html" title="Nhấn để xem chi tiết"><img src="../img/product-1.png"/></a></div>
-                  <div class="box-product-detail">
-                    <h5><a href="chi-tiet-san-pham.html" title="Cà phê hòa tan Espresso hộp 100 gói">Cà phê hòa tan Espresso hộp 100 gói</a></h5>
-                    <h4>250.000 đ</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quos eius voluptatem cumque soluta, nihil vero repellat deserunt nisi consequuntur! Pariatur, modi asperiores eum magnam perspiciatis unde quo vitae dicta?</p>
-                  </div>
-                  <div class="box-product-custom"><a class="custom-quickview" data-toggle="modal" data-target=".product-modal-1" title="Xem nhanh sản phẩm"><i class="mdi mdi-eye-plus"></i></a><a class="custom-cart"><i class="mdi mdi-cart-plus"></i>Thêm vào giỏ</a><a href="chi-tiet-san-pham.html" title="Xem chi tiết"><i class="mdi mdi-link-variant"></i></a></div>
-                </div>
-                <div class="box-product">
-                  <div class="box-product-img"><a href="chi-tiet-san-pham.html" title="Nhấn để xem chi tiết"><img src="../img/product-1.png"/></a></div>
-                  <div class="box-product-detail">
-                    <h5><a href="chi-tiet-san-pham.html" title="Cà phê hòa tan Espresso hộp 100 gói">Cà phê hòa tan Espresso hộp 100 gói</a></h5>
-                    <h4>250.000 đ</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quos eius voluptatem cumque soluta, nihil vero repellat deserunt nisi consequuntur! Pariatur, modi asperiores eum magnam perspiciatis unde quo vitae dicta?</p>
-                  </div>
-                  <div class="box-product-custom"><a class="custom-quickview" data-toggle="modal" data-target=".product-modal-1" title="Xem nhanh sản phẩm"><i class="mdi mdi-eye-plus"></i></a><a class="custom-cart"><i class="mdi mdi-cart-plus"></i>Thêm vào giỏ</a><a href="chi-tiet-san-pham.html" title="Xem chi tiết"><i class="mdi mdi-link-variant"></i></a></div>
-                </div>
-                <div class="box-product">
-                  <div class="box-product-img"><a href="chi-tiet-san-pham.html" title="Nhấn để xem chi tiết"><img src="../img/product-1.png"/></a></div>
-                  <div class="box-product-detail">
-                    <h5><a href="chi-tiet-san-pham.html" title="Cà phê hòa tan Espresso hộp 100 gói">Cà phê hòa tan Espresso hộp 100 gói</a></h5>
-                    <h4>250.000 đ</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quos eius voluptatem cumque soluta, nihil vero repellat deserunt nisi consequuntur! Pariatur, modi asperiores eum magnam perspiciatis unde quo vitae dicta?</p>
-                  </div>
-                  <div class="box-product-custom"><a class="custom-quickview" data-toggle="modal" data-target=".product-modal-1" title="Xem nhanh sản phẩm"><i class="mdi mdi-eye-plus"></i></a><a class="custom-cart"><i class="mdi mdi-cart-plus"></i>Thêm vào giỏ</a><a href="chi-tiet-san-pham.html" title="Xem chi tiết"><i class="mdi mdi-link-variant"></i></a></div>
-                </div>
-              </div>
-              <div class="main-paging">
-                <nav>
-                  <ul class="pagination justify-content-end">
-                    <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span><span class="sr-only">Previous</span></a></li>
-                    <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span><span class="sr-only">Next</span></a></li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
+            </form>
           </div>
         </section>
       </article>

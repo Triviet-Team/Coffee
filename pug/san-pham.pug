@@ -1,4 +1,340 @@
 extends _inc
 
 block main  
-  h1 hello
+  section.bg-page
+    .container-fluid
+      | sản phẩm
+  
+  section.bread-crumb
+    .container-fluid
+      .bc-icons
+        nav(aria-label='breadcrumb')
+          ol.breadcrumb
+            li.breadcrumb-item
+              a(href='index.html') Trang chủ
+            li.breadcrumb-item.active Sản phẩm
+
+  section.product-page
+    .container-fluid
+      .left
+        .filter
+          .filter-close.d-block.d-lg-none
+            i.mdi.mdi-close
+
+          .filter-price
+            h3 lọc giá
+            
+            label.check-box
+              | 0 đ - 200.000 đ
+              input(type='checkbox', checked='checked')
+              span.checkmark
+            label.check-box
+              | 200.000 đ - 500.000 đ
+              input(type='checkbox')
+              span.checkmark
+            label.check-box
+              | 500.000 đ - 1.000.000 đ
+              input(type='checkbox')
+              span.checkmark
+            label.check-box
+              | 1.000.000 đ - 2.000.000 đ
+              input(type='checkbox')
+              span.checkmark
+            label.check-box
+              | 2.000.000 đ - 3.000.000 đ
+              input(type='checkbox')
+              span.checkmark
+            label.check-box
+              | Hơn 3.000.000 đ
+              input(type='checkbox')
+              span.checkmark
+
+          .seller
+            h3 sản phẩm bán chạy
+
+            .product-left
+              .product-left-img
+                a(href='chi-tiet-san-pham.html')
+                  img(src='../img/product-1.png')
+              .product-left-detail
+                h5
+                  a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                    | Cà phê hòa tan Espresso hộp 100 gói
+                h4 250.000 đ
+
+            .product-left
+              .product-left-img
+                a(href='chi-tiet-san-pham.html')
+                  img(src='../img/product-1.png')
+              .product-left-detail
+                h5
+                  a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                    | Cà phê hòa tan Espresso hộp 100 gói
+                h4 250.000 đ
+
+            .product-left
+              .product-left-img
+                a(href='chi-tiet-san-pham.html')
+                  img(src='../img/product-1.png')
+              .product-left-detail
+                h5
+                  a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                    | Cà phê hòa tan Espresso hộp 100 gói
+                h4 250.000 đ
+
+            .product-left
+              .product-left-img
+                a(href='chi-tiet-san-pham.html')
+                  img(src='../img/product-1.png')
+              .product-left-detail
+                h5
+                  a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                    | Cà phê hòa tan Espresso hộp 100 gói
+                h4 250.000 đ
+
+            .product-left
+              .product-left-img
+                a(href='chi-tiet-san-pham.html')
+                  img(src='../img/product-1.png')
+              .product-left-detail
+                h5
+                  a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                    | Cà phê hòa tan Espresso hộp 100 gói
+                h4 250.000 đ
+
+        .banner-left
+          a(href='chi-tiet-san-pham.html')        
+            img(src='../img/about-3.png')
+      
+      .main
+        .filter-btn.d-block.d-lg-none
+          i.mdi.mdi-filter
+          | Lọc sản phẩm
+
+        h2 Cà phê cao cấp
+
+        .main-custom
+          .type.d-none.d-md-block
+            span Kiểu xem:
+            i.mdi.mdi-view-grid.type-grid.active
+            i.mdi.mdi-view-list.type-list
+
+          .sort
+            span.d-none.d-md-inline-block Sắp xếp:
+            select.form-control
+              option(value="") Sản phẩm mới nhất
+              option(value="") Giá từ cao xuống thấp
+              option(value="") Giá từ thấp lên cao
+              option(value="") Tên từ A đến Z
+              option(value="") Tên từ Z đến A
+
+          .view
+            span Hiển thị:
+            select.form-control
+              option(value="") 8
+              option(value="", selected) 16 
+              option(value="") 24
+              option(value="") 32
+            | Sản phẩm
+        
+        .main-product
+          .box-product
+            .box-product-img
+              a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                img(src='../img/product-1.png')
+            .box-product-detail
+              h5
+                a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                  | Cà phê hòa tan Espresso hộp 100 gói
+              h4 250.000 đ
+              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quos eius voluptatem cumque soluta, nihil vero repellat deserunt nisi consequuntur! Pariatur, modi asperiores eum magnam perspiciatis unde quo vitae dicta?
+
+            .box-product-custom
+              a.custom-quickview(data-toggle="modal" data-target=".product-modal-1", title='Xem nhanh sản phẩm')
+                i.mdi.mdi-eye-plus
+              a.custom-cart
+                i.mdi.mdi-cart-plus
+                | Thêm vào giỏ
+              a(href='chi-tiet-san-pham.html', title='Xem chi tiết')
+                i.mdi.mdi-link-variant
+                
+          .box-product
+            .box-product-img
+              a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                img(src='../img/product-1.png')
+            .box-product-detail
+              h5
+                a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                  | Cà phê hòa tan Espresso hộp 100 gói
+              h4 250.000 đ
+              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quos eius voluptatem cumque soluta, nihil vero repellat deserunt nisi consequuntur! Pariatur, modi asperiores eum magnam perspiciatis unde quo vitae dicta?
+
+            .box-product-custom
+              a.custom-quickview(data-toggle="modal" data-target=".product-modal-1", title='Xem nhanh sản phẩm')
+                i.mdi.mdi-eye-plus
+              a.custom-cart
+                i.mdi.mdi-cart-plus
+                | Thêm vào giỏ
+              a(href='chi-tiet-san-pham.html', title='Xem chi tiết')
+                i.mdi.mdi-link-variant
+                
+          .box-product
+            .box-product-img
+              a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                img(src='../img/product-1.png')
+            .box-product-detail
+              h5
+                a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                  | Cà phê hòa tan Espresso hộp 100 gói
+              h4 250.000 đ
+              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quos eius voluptatem cumque soluta, nihil vero repellat deserunt nisi consequuntur! Pariatur, modi asperiores eum magnam perspiciatis unde quo vitae dicta?
+
+            .box-product-custom
+              a.custom-quickview(data-toggle="modal" data-target=".product-modal-1", title='Xem nhanh sản phẩm')
+                i.mdi.mdi-eye-plus
+              a.custom-cart
+                i.mdi.mdi-cart-plus
+                | Thêm vào giỏ
+              a(href='chi-tiet-san-pham.html', title='Xem chi tiết')
+                i.mdi.mdi-link-variant
+                
+          .box-product
+            .box-product-img
+              a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                img(src='../img/product-1.png')
+            .box-product-detail
+              h5
+                a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                  | Cà phê hòa tan Espresso hộp 100 gói
+              h4 250.000 đ
+              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quos eius voluptatem cumque soluta, nihil vero repellat deserunt nisi consequuntur! Pariatur, modi asperiores eum magnam perspiciatis unde quo vitae dicta?
+
+            .box-product-custom
+              a.custom-quickview(data-toggle="modal" data-target=".product-modal-1", title='Xem nhanh sản phẩm')
+                i.mdi.mdi-eye-plus
+              a.custom-cart
+                i.mdi.mdi-cart-plus
+                | Thêm vào giỏ
+              a(href='chi-tiet-san-pham.html', title='Xem chi tiết')
+                i.mdi.mdi-link-variant
+                
+          .box-product
+            .box-product-img
+              a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                img(src='../img/product-1.png')
+            .box-product-detail
+              h5
+                a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                  | Cà phê hòa tan Espresso hộp 100 gói
+              h4 250.000 đ
+              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quos eius voluptatem cumque soluta, nihil vero repellat deserunt nisi consequuntur! Pariatur, modi asperiores eum magnam perspiciatis unde quo vitae dicta?
+
+            .box-product-custom
+              a.custom-quickview(data-toggle="modal" data-target=".product-modal-1", title='Xem nhanh sản phẩm')
+                i.mdi.mdi-eye-plus
+              a.custom-cart
+                i.mdi.mdi-cart-plus
+                | Thêm vào giỏ
+              a(href='chi-tiet-san-pham.html', title='Xem chi tiết')
+                i.mdi.mdi-link-variant
+                
+          .box-product
+            .box-product-img
+              a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                img(src='../img/product-1.png')
+            .box-product-detail
+              h5
+                a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                  | Cà phê hòa tan Espresso hộp 100 gói
+              h4 250.000 đ
+              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quos eius voluptatem cumque soluta, nihil vero repellat deserunt nisi consequuntur! Pariatur, modi asperiores eum magnam perspiciatis unde quo vitae dicta?
+
+            .box-product-custom
+              a.custom-quickview(data-toggle="modal" data-target=".product-modal-1", title='Xem nhanh sản phẩm')
+                i.mdi.mdi-eye-plus
+              a.custom-cart
+                i.mdi.mdi-cart-plus
+                | Thêm vào giỏ
+              a(href='chi-tiet-san-pham.html', title='Xem chi tiết')
+                i.mdi.mdi-link-variant
+                
+          .box-product
+            .box-product-img
+              a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                img(src='../img/product-1.png')
+            .box-product-detail
+              h5
+                a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                  | Cà phê hòa tan Espresso hộp 100 gói
+              h4 250.000 đ
+              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quos eius voluptatem cumque soluta, nihil vero repellat deserunt nisi consequuntur! Pariatur, modi asperiores eum magnam perspiciatis unde quo vitae dicta?
+
+            .box-product-custom
+              a.custom-quickview(data-toggle="modal" data-target=".product-modal-1", title='Xem nhanh sản phẩm')
+                i.mdi.mdi-eye-plus
+              a.custom-cart
+                i.mdi.mdi-cart-plus
+                | Thêm vào giỏ
+              a(href='chi-tiet-san-pham.html', title='Xem chi tiết')
+                i.mdi.mdi-link-variant
+                
+          .box-product
+            .box-product-img
+              a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                img(src='../img/product-1.png')
+            .box-product-detail
+              h5
+                a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                  | Cà phê hòa tan Espresso hộp 100 gói
+              h4 250.000 đ
+              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quos eius voluptatem cumque soluta, nihil vero repellat deserunt nisi consequuntur! Pariatur, modi asperiores eum magnam perspiciatis unde quo vitae dicta?
+
+            .box-product-custom
+              a.custom-quickview(data-toggle="modal" data-target=".product-modal-1", title='Xem nhanh sản phẩm')
+                i.mdi.mdi-eye-plus
+              a.custom-cart
+                i.mdi.mdi-cart-plus
+                | Thêm vào giỏ
+              a(href='chi-tiet-san-pham.html', title='Xem chi tiết')
+                i.mdi.mdi-link-variant
+                
+          .box-product
+            .box-product-img
+              a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                img(src='../img/product-1.png')
+            .box-product-detail
+              h5
+                a(href='chi-tiet-san-pham.html', title='Cà phê hòa tan Espresso hộp 100 gói')
+                  | Cà phê hòa tan Espresso hộp 100 gói
+              h4 250.000 đ
+              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quos eius voluptatem cumque soluta, nihil vero repellat deserunt nisi consequuntur! Pariatur, modi asperiores eum magnam perspiciatis unde quo vitae dicta?
+
+            .box-product-custom
+              a.custom-quickview(data-toggle="modal" data-target=".product-modal-1", title='Xem nhanh sản phẩm')
+                i.mdi.mdi-eye-plus
+              a.custom-cart
+                i.mdi.mdi-cart-plus
+                | Thêm vào giỏ
+              a(href='chi-tiet-san-pham.html', title='Xem chi tiết')
+                i.mdi.mdi-link-variant
+                
+        .main-paging
+          nav
+            ul.pagination.justify-content-end
+              li.page-item
+                a.page-link(href='#', aria-label='Previous')
+                  span(aria-hidden='true') «
+                  span.sr-only Previous
+              li.page-item
+                a.page-link.active(href='#') 1
+              li.page-item
+                a.page-link(href='#') 2
+              li.page-item
+                a.page-link(href='#') 3
+              li.page-item
+                a.page-link(href='#', aria-label='Next')
+                  span(aria-hidden='true') »
+                  span.sr-only Next
+
+
+

@@ -15,25 +15,7 @@ $('.slider-carousel').owlCarousel({
   autoplaySpeed: 1000,
 });
 
-$('.slider-carousel').on('changed.owl.carousel', function(event) {
-  var item = event.item.index-2;
-
-  $('h1').removeClass('animated flipInX');
-  $('.owl-item')
-    .not('.cloned')
-    .eq(item)
-    .find('h1')
-    .addClass('animated flipInX');
-
-
-  $('h5').removeClass('animated fadeInUp');
-  $('.owl-item')
-    .not('.cloned')
-    .eq(item)
-    .find('h5')
-    .addClass('animated fadeInUp');
-});
-
+// XZOOM
 $('.xzoom-carousel').owlCarousel({
   loop:false,
   autoplay: false,
@@ -47,7 +29,6 @@ $('.xzoom-carousel').owlCarousel({
   ],
 });
 
-// XZOOM
 $(".xzoom, .xzoom-gallery").xzoom({tint: '#333', Xoffset: 15});
 $('.main-image').bind('click', function () {
   var xzoom = $(this).data('xzoom');
@@ -125,12 +106,15 @@ $('.partner-carousel').owlCarousel({
   }
 });
 
+// ANIMATION
 wow = new WOW(
   {
-  mobile:       false,
+  mobile: false,
   }
 )
 wow.init();
+
+
 
 $(document).ready(() => {
   const ww = document.body.clientWidth;
@@ -208,10 +192,10 @@ $(document).ready(() => {
     $('.cart').toggleClass('cart-out');
   });
   
-  $('.overlay, .cart-close').click(function () {
+  $('.overlay, .cart-close, .filter-close').click(function () {
     $('.overlay').removeClass('overlay-in');
     $('.cart').removeClass('cart-out');
-    
+    $('.left').removeClass('left-out')
   });
 
   $('.overlay-menu, .menu-close').click(function() {
@@ -283,14 +267,12 @@ $(document).ready(() => {
   });
 
   $(".quantity button").on("click", function() {
-
     let $button = $(this);
     let oldValue = $button.parent().find("input").val();
   
     if ($button.text() == "+") {
       var newVal = parseFloat(oldValue) + 1;
     } else {
-     // Don't allow decrementing below zero
       if (oldValue > 1) {
         var newVal = parseFloat(oldValue) - 1;
       } else {
@@ -317,5 +299,20 @@ $(document).ready(() => {
       .addClass('wow zoomIn');
   }
 
-  
+  $('.type-list').click(function() {
+    $('.main-product').addClass('main-product-list');
+    $(this).addClass('active');
+    $('.type-grid').removeClass('active');
+  });
+
+  $('.type-grid').click(function() {
+    $('.main-product').removeClass('main-product-list');
+    $(this).addClass('active');
+    $('.type-list').removeClass('active');
+  });
+
+  $('.filter-btn').click(() => {
+    $('.left').addClass('left-out');
+    $('.overlay').addClass('overlay-in');
+  });
 });
